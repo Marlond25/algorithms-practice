@@ -2,26 +2,28 @@
 # This is my solution to the challenge!
 
 def QuestionsMarks(str):
-    counter = 0
     result = False
+    auxList = []
+    counter = 0
+
     for i in str:
 
-        if str[counter : counter + 1].isnumeric():
-            counter_qMarks = counter
-            qMarks = 0
+        if i.isnumeric() and (len(auxList) < 2):
+            auxList.append(i)
 
-            for j in range(len(str) - counter):
+        if (i == "?") and (len(auxList) > 0):
+            counter += 1
 
-                if str[counter_qMarks : counter_qMarks + 1] == "?":
-                    qMarks = qMarks + 1
+        if i.isnumeric() and (len(auxList) == 2):
 
-                elif str[counter_qMarks : counter_qMarks + 1].isnumeric():
+            if (counter == 3) and (int(auxList[0]) + int(auxList[1]) == 10):
+                result = True
+            elif (counter != 3) and (int(auxList[0]) + int(auxList[1]) == 10):
+                return False
 
-                    if (qMarks == 3) and (int(str[counter : counter + 1]) + int(str[counter_qMarks : counter_qMarks + 1])) == 10:
-                        result = True
-
-                counter_qMarks = counter_qMarks + 1
-        counter = counter + 1
+            auxList.clear()
+            counter = 0
+            auxList.append(i)
     return result
 
-print(QuestionsMarks("arrb6??lp4x??xbl??6??eee5sDFG?sgfdsg??sG?5sgf????sgfdsddfg4fhd?GHd6???dgh5?dhd???1dhg?ds?s?s?S9??S5?02"))
+print(QuestionsMarks("arrb???6???lp4x??xbl?6??eee5sDFG?sgfdsg?sG?5sgf????sgfdsddfg4fhd???GHd6???dgh5?dhd???1dhg??ds?ssS9??S5?02??s8"))
