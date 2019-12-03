@@ -1,41 +1,27 @@
 # Source: https://www.coderbyte.com/editor/Questions%20Marks:Python
 # This is my solution to the challenge!
 
-def QuestionsMarkss(str):
-
-    questionMark = 0
-    digitOne = 0
-    digitTwo = 0
+def QuestionsMarks(str):
     counter = 0
-    counter1 = 0
-    lenght = len(str)
-    result = ""
-
+    result = False
     for i in str:
-        key = str[counter : counter + 1]
 
-        if key.isnumeric():
-            digitOne = int(key)
-            x = lenght - counter - 1
-            counter1 = counter + 1
+        if str[counter : counter + 1].isnumeric():
+            counter_qMarks = counter
+            qMarks = 0
 
-            for j in range(x):
+            for j in range(len(str) - counter):
 
-                if (str[counter1 : counter1 + 1] == "?"):
-                    questionMark = questionMark + 1
-                elif str[counter1 : counter1 + 1].isnumeric():
-                    digitTwo = int(str[counter1 : counter1 + 1])
+                if str[counter_qMarks : counter_qMarks + 1] == "?":
+                    qMarks = qMarks + 1
 
-                    if (digitOne + digitTwo == 10) and (questionMark == 3):
-                        return "true"
-                    else:
-                        return "false"
+                elif str[counter_qMarks : counter_qMarks + 1].isnumeric():
 
-                counter1 = counter1 + 1
+                    if (qMarks == 3) and (int(str[counter : counter + 1]) + int(str[counter_qMarks : counter_qMarks + 1])) == 10:
+                        result = True
 
+                counter_qMarks = counter_qMarks + 1
         counter = counter + 1
-        counter1 = counter1 + 1
-
     return result
 
-print(QuestionsMarkss("arrb6??lp4x???xbl5???eee5"))
+print(QuestionsMarks("arrb6??lp4x??xbl??6??eee5sDFG?sgfdsg??sG?5sgf????sgfdsddfg4fhd?GHd6???dgh5?dhd???1dhg?ds?s?s?S9??S5?02"))
