@@ -1,4 +1,4 @@
-# Source: https://www.coderbyte.com/editor/Questions%20Marks:Python
+# Source for the challenge: https://www.coderbyte.com/editor/Questions%20Marks:Python
 # This is my solution to the challenge!
 
 def QuestionsMarks(str):
