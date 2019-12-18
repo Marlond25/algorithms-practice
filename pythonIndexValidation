@@ -1,5 +1,3 @@
-# Source: pynative.com
-
 def getStr():
     str = input()
     return str
