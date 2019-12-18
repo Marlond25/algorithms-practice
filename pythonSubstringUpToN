@@ -2,10 +2,9 @@ def getData(msg):
     data = input(msg)
     return data
 
-def removeUpToN(str, n):
-    str = str[n:]
-    print(str)
+def removeUpToN(str):
+    str = str[int(getData("Type n < len(str): ")):]
+    return str
 
 str = getData("Type a string: ")
-n = int(getData("Type n < len(str): "))
-removeUpToN(str, n)
+print(removeUpToN(str))
