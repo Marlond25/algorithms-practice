@@ -1,22 +1,23 @@
-def ingresarDatos():
-    dato = input()
-    return dato
+def getData():
+    data = input()
+    return data
 
 
-def multiplicarDatos(dato1, dato2):
-    producto = dato1 * dato2
-    return producto
+def multiplyData(data1, data2):
+    product = data1 * data2
+    return product
 
 
-def sumarDatos(dato1, dato2):
-    suma = dato1 + dato2
-    return suma
+def sumData(data1, data2):
+    sum = data1 + data2
+    return sum
 
-dato1 = 4
-dato2 = 300
-producto = multiplicarDatos(dato1, dato2)
-print(producto)
 
-if producto > 1000:
-    suma = sumarDatos(dato1, dato2)
-    print(suma)
+data1 = getData()
+data2 = getData()
+product = multiplyData(data1, data2)
+print(product)
+
+if product > 1000:
+    sum = sumData(data1, data2)
+    print(sum)
