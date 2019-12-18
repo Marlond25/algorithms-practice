@@ -1,3 +1,5 @@
+# Source: pynative.com
+
 def getData():
     data = input()
     return data
