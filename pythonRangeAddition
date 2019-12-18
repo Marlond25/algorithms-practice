@@ -1,4 +1,3 @@
-# Source: pynative.com
 def getRange():
     xrange = int(input())
     return xrange
