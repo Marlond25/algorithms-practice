@@ -1,10 +1,10 @@
 def getData(msg):
-    data = input(msg)
-    return data
+    return input(msg)
+
 
 def removeUpToN(str):
-    str = str[int(getData("Type n < len(str): ")):]
-    return str
+    return str[int(getData("Type n < len(str): ")):]
+
 
 str = getData("Type a string: ")
 print(removeUpToN(str))
