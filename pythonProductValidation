@@ -13,7 +13,7 @@ def sumData(data1, data2):
     return sum
 
 
-data1 = getData()
+data1 = int(getData()
 data2 = getData()
 product = multiplyData(data1, data2)
 print(product)
