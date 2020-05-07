@@ -1,0 +1,10 @@
+function arrayDiff(a, b) {
+  for (let i in b) {
+    for (let j in a) {
+      if (a[0] === b[0]) {
+        a = a.filter(e => e !== b[0]);
+      }
+    }
+  }
+  return a;
+}
