@@ -1,4 +1,4 @@
-// Way to easy with int.toString(16); this is more fun.
+// Way too easy with int.toString(16); this is more fun.
 
 function rgb(r, g, b){
   let rToHex = getHex(r < 0 ? 0 : r > 255 ? 255 : r);
