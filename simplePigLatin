@@ -1,0 +1,10 @@
+function pigIt(str){
+  let words = str.split(" ");
+  let pigTranslation = [];
+  for (let i in words) {
+    let dontMove = Array.from(words[i]);
+    let move = dontMove.shift();
+    pigTranslation.push(dontMove.join("")+move+"ay");
+  }
+  return pigTranslation.join(" ");
+}
